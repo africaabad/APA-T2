@@ -69,28 +69,31 @@ def mcd(numero1, numero2):
     for prova in n1:
         if prova in n2:
             res = res*prova
+            
     return res
-    
+
+
 def mcm(numero1, numero2):
     #formula de mcd a mcm
     return (numero1 * numero2) // mcd(numero1, numero2)
-    
+
+
 def mcdN(*numeros):
     resultado = numeros[0]
     for num in numeros[1:]:
         resultat = mcd(resultat, num)
+        
     return resultat
+
 
 def mcmN(*numeros):    
     resultat = numeros[0]
     for num in numeros[1:]:
         resultat = mcm(resultat, num)
+        
     return resultat
 
 
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-
-
-
